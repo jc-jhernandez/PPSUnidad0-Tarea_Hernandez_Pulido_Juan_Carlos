@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos
+    ports:
+      - "8085:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
