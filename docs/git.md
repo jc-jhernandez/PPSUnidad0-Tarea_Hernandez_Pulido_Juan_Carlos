@@ -1,5 +1,28 @@
 # Git - Gestión del Repositorio
 
+## Índice
+
+- [Creación de clave ssh](#creación-de-clave-ssh)
+- [Creación del repositorio](#creación-del-repositorio)
+  - [Invitar colaborador](#invitar-colaborador)
+  - [Clonar el repositorio](#clonar-el-repositorio)
+- [Estructura del repositorio](#estructura-del-repositorio)
+  - [Crear rama develop](#crear-rama-develop)
+  - [Creación de estructura del repositorio](#creación-de-estructura-del-repositorio)
+  - [Verificar la estructura](#verificar-la-estructura)
+- [Configuración de Git ignore](#configuración-de-git-ignore)
+- [Pull Request](#pull-request)
+  - [Verificar el PR](#verificar-el-pr)
+- [Merge del Pull Request](#merge-del-pull-request)
+  - [Revisión](#revisión)
+  - [Merge desde CLI](#merge-desde-cli)
+- [Actualizar main local](#actualizar-main-local)
+- [Comandos Git utilizados](#comandos-git-utilizados)
+  - [Básicos](#básicos)
+  - [Ramas](#ramas)
+  - [Pull Requests (GitHub CLI)](#pull-requests-github-cli)
+  - [Trabajo con gh-pages](#trabajo-con-gh-pages)
+
 ## Creación de clave ssh
 
 Configuro una nueva clave ssh en mi instancia Kali y mi cuenta github
@@ -25,18 +48,19 @@ _**Nota:** Durante la ejecución de la tarea descubrí un error al crear el repo
 
 ![Captura: Modificar visibilidad](../images/git-1.1.png)
 
-### Invitar colaborador
+## Invitar colaborador
 
 Tal y como se indica en la tarea, invito al colaborar PPSvjp
 
 ![Captura: Invitar colaborador ](../images/git-5.png)
 ![Captura: Listar Colaboradores ](../images/git-6.png)
 
+## Clonar el repositorio
 
 Una vez creado, lo clono:
 
 ```bash
-git clone git clone git@github.com:jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos.git
+git clone git@github.com:jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos.git
 cd PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos
 ```
 
@@ -69,14 +93,15 @@ Voy a configurar el repositorio siguiendo los pasos indicados en la documentaci�
 
 
 
-### Crear rama develop
+## Crear rama develop
 
 Por buenas practicas, voy a trabajar por defecto en la rama develop. Una vez verificado y completadas las tareas, realizaré pullrequest a la rama principal main.
 
 ```bash
 git checkout -b develop
 ```
-### Creación de estructura del repositorio
+
+## Creación de estructura del repositorio
 
 ```bash
   mkdir -p calculator docs .github/workflows images
@@ -98,7 +123,7 @@ Resultado de la ejecución
 
 ![Captura: Push rama main](../images/git-13.png)
 
-### Verificar la estructura
+## Verificar la estructura
 
 ```bash
 ls -la
@@ -172,17 +197,17 @@ Thumbs.db
 
 Voy a realizar el commit del .gitignore y de todas las capturas. En este caso voy a usar la interfaz de Visual Studio Code para proporcionar otro ejemplo.
 
+![Captura: commit .gitignore](../images/git-15.png)
+
+![Captura: Adjuntar caputuras en directorio images](../images/git-16.png)
+![Captura: Realizar push mediante interfaz Visual Studio Code](../images/git-17.png)
+
+Solo se realizan estas acciones en interfaz como ejemplo. Proseguiremos la realización de la practica mediante comandos git para afianzar el conocimiento.
+
+
 ## Pull Request
 
-Cuando está todo listo en develop, creo un PR para integrar en main.
-
-### Desde la web
-
-Lo clásico: repo > Pull requests > New pull request > base: `main`, compare: `develop`.
-
-![Captura: Crear PR desde web](../images/github-create-pr.png)
-
-### Con GitHub CLI (más rápido)
+Vamos a proceder a crear una primera entrega desde la rama develop a la rama master. Utilizaremos la interfaz cli gh
 
 ```bash
 gh auth login
@@ -190,45 +215,25 @@ gh auth login
 gh pr create \
   --base main \
   --head develop \
-  --title "Tarea RA5 completada - Listo para revisión" \
+  --title "Tarea RA5 - primer PR" \
   --body "## Resumen de cambios
 
-Esta PR incluye toda la tarea RA5 completa:
+Esta PR incluye primeros pasos de la tarea RA5:
 
 ### ✅ Completado
 
 - [x] Estructura del repositorio creada
-- [x] Documentación en Markdown (index, git, gitActions, gitPages, docker, conclusiones)
-- [x] Configuración de MkDocs (mkdocs.yml)
-- [x] Workflow de GitHub Actions para documentación automática
-- [x] Configuración de GitHub Pages
-- [x] Instrucciones de Docker/Docker Compose para NGINX
-- [x] Archivos de configuración (.gitignore, requirements.txt)
-
-### 📋 Archivos incluidos
-
-- docs/*.md (6 archivos de documentación)
-- mkdocs.yml
-- requirements.txt
-- .github/workflows/CreacionDocumentacion.yml
-- docker-compose.yml
-- .gitignore
-
-### 🧪 Testing
-
-- ✅ Documentación genera correctamente con mkdocs build
-- ✅ GitHub Actions workflow validado
-- ✅ Docker Compose funciona en localhost:8085
-
-### 📝 Notas
-
-Repositorio preparado para entrega según requisitos de la tarea.
-Profesor añadido como colaborador: @PPSvjp"
+- [ ] Documentación en Markdown (index, git, gitActions, gitPages, docker, conclusiones)
+- [ ] Configuración de MkDocs (mkdocs.yml)
+- [ ] Workflow de GitHub Actions para documentación automática
+- [ ] Configuración de GitHub Pages
+- [ ] Instrucciones de Docker/Docker Compose para NGINX
+- [x] Archivos de configuración (.gitignore, requirements.txt)"
 ```
 
-![Captura: PR creado con gh cli](../images/gh-pr-create.png)
+![Captura: PR creado con gh cli](../images/git-pr-1.png)
 
-### Verificar el PR
+## Verificar el PR
 
 ```bash
 gh pr view
@@ -236,11 +241,11 @@ gh pr list
 gh pr view --web
 ```
 
-![Captura: Detalles del PR](../images/github-pr-details.png)
+![Captura: Detalles del PR](../images/git-pr-2.png)
 
 ## Merge del Pull Request
 
-### Revisión
+## Revisión
 
 Antes de hacer merge:
 
@@ -249,19 +254,19 @@ Antes de hacer merge:
 - ✅ GitHub Actions pasa
 - ✅ Sin conflictos
 
-### Merge desde GitHub
+_**Nota:** Los PR tienen como objetivo la revisión cruzada de código entre los miembros del equipo. Cuando se trabaja individualmente pierden parte de su utilidad. De cualquier forma nos facilitan el seguimiento de las tareas y cambios_
 
-Repo > PR > Files changed > Merge pull request > Confirm merge
+Visualización en la web del PR
 
-![Captura: Merge del PR](../images/github-pr-merge.png)
+![Captura: PR web](../images/git-pr-3.png)
 
-### Merge desde CLI
+## Merge desde CLI
 
 ```bash
 gh pr merge 1 --merge
 ```
 
-![Captura: Merge con gh cli](../images/gh-pr-merge-cli.png)
+![Captura: Merge con gh cli](../images/git-pr-4.png)
 
 ## Actualizar main local
 
@@ -273,17 +278,11 @@ git pull origin main
 git log --oneline -5
 ```
 
-![Captura: Pull de main actualizado](../images/git-pull-main.png)
-
-## Añadir colaborador
-
-Settings > Collaborators > Add people > `PPSvjp` > Enviar invitación
-
-![Captura: Añadir colaborador](../images/add-colaborador.png)
+![Captura: Pull de main actualizado](../images/git-pr-5.png)
 
 ## Comandos Git utilizados
 
-### Básicos
+## Básicos
 
 | Comando | Descripción |
 |---------|-------------|
@@ -293,7 +292,7 @@ Settings > Collaborators > Add people > `PPSvjp` > Enviar invitación
 | `git push` | Subir cambios |
 | `git pull` | Descargar cambios |
 
-### Ramas
+## Ramas
 
 | Comando | Descripción |
 |---------|-------------|
@@ -304,7 +303,7 @@ Settings > Collaborators > Add people > `PPSvjp` > Enviar invitación
 | `git merge nombre-rama` | Fusionar rama |
 | `git branch -d nombre-rama` | Eliminar rama |
 
-### Pull Requests (GitHub CLI)
+## Pull Requests (GitHub CLI)
 
 | Comando | Descripción |
 |---------|-------------|
@@ -315,7 +314,7 @@ Settings > Collaborators > Add people > `PPSvjp` > Enviar invitación
 | `gh pr merge` | Fusionar PR |
 | `gh pr view --web` | Abrir en navegador |
 
-### Trabajo con gh-pages
+## Trabajo con gh-pages
 
 ```bash
 git fetch origin
@@ -324,28 +323,3 @@ git checkout gh-pages
 
 Esta rama contiene la documentación compilada por MkDocs.
 
-## Resumen del flujo completo
-
-```bash
-git clone https://github.com/tu-usuario/PPS-Unidad0-Tarea-Hernandez_Pulido_Juan_Carlos.git
-cd PPS-Unidad0-Tarea-Hernandez_Pulido_Juan_Carlos
-
-mkdir -p calculator docs .github/workflows img
-
-git checkout -b develop
-
-git add .
-git commit -m "Mensaje descriptivo"
-git push -u origin develop
-
-gh pr create --base main --head develop --title "Título" --body "Descripción"
-
-gh pr merge 1 --merge
-
-git checkout main
-git pull origin main
-```
-
-## Conclusión
-
-Repo creado con flujo Git Flow profesional. La rama `develop` para el trabajo, `main` limpia con código revisado, y PRs para integrar. Flujo estándar en desarrollo profesional.
