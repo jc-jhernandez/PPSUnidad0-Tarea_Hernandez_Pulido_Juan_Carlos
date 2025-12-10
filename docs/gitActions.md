@@ -174,6 +174,7 @@ Esta PR incluye primeros pasos de la tarea RA5:
 gh pr merge 2 --merge
 ```
 ![Captura: Pestaña Actions](images/gitActions-4.png)
+
 ## Verificar ejecución
 
 Después del merge, voy a:
@@ -191,8 +192,20 @@ Estados:
 
 Puedo ver un error porque no he completado el contenido del fichero requiriments.txt.
 
-Aplico solución y vuelvo a ejecutar:
+Para solucionarlo, hago uso del mkdocs en local
 
+```bash
+  pip install
+  mkdocs serve --dev-addr=0.0.0.0:8000
+```
+Resultado en local:
+![Captura: Documentación en local](images/mkdocs-localpng)
+
+Vuelvo a realizar PR a producción con todos los cambios. En ese caso ya conseguimos
+![Captura: Pestaña Actions Ejecucion](images/gitActions-5.1.png)
+![Captura: Pestaña Actions Exito](images/gitActions-5.2.png)
+
+Observamos el detalle del workflow realizado con exito y sus pasos:
 
 ![Captura: Detalles del workflow](images/gitActions-6.png)
 
@@ -203,18 +216,13 @@ Después de la primera ejecución exitosa, verifico que se creó la rama `gh-pag
 ```bash
 git fetch origin
 git branch -a
-```
-
-Debería aparecer `remotes/origin/gh-pages`.
-
-```bash
-# Puedo cambiar a esa rama para ver el contenido
 git checkout gh-pages
 ls -la
 git checkout develop
 ```
 
-![Captura: Rama gh-pages](images/gitActions-7.png)
+![Captura: Rama gh-pages](images/gitActions-7.1.png)
+![Captura: Rama gh-pages contenido](images/gitActions-7.2.png)
 
 ## Ejecución manual
 
@@ -227,49 +235,4 @@ Si necesito forzar una ejecución sin hacer push:
 5. **Run workflow**
 
 ![Captura: Ejecución manual](images/gitActions-8.png)
-
-## Solución de problemas
-
-### Error de permisos
-
-Si falla por permisos:
-
-**Settings** > **Actions** > **General** > **Workflow permissions** > **Read and write permissions** > **Save**
-
-### Error instalando dependencias
-
-Verificar que `requirements.txt` existe y contiene:
-```
-mkdocs>=1.5.0
-mkdocs-material>=9.4.0
-```
-
-### Ver logs de error
-
-Click en el paso que falló > Ver el log completo
-
-## Comandos útiles
-
-```bash
-# Ver el workflow
-cat .github/workflows/CreacionDocumentacion.yml
-
-# Forzar ejecución (commit vacío)
-git commit --allow-empty -m "Trigger: workflow"
-git push origin main
-
-# Ver ramas
-git branch -a
-
-# Cambiar a gh-pages
-git checkout gh-pages
-
-# Volver a develop
-git checkout develop
-```
-
----
-
-**Conclusión**
-
-Una vez configurado, el workflow funciona solo. Cada cambio en `main` actualiza automáticamente la documentación en GitHub Pages. Cero trabajo manual.
+![Captura: Resultado ejecución manual](images/gitActions-8.1.png)

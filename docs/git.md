@@ -18,10 +18,10 @@
   - [Merge desde CLI](#merge-desde-cli)
 - [Actualizar main local](#actualizar-main-local)
 - [Comandos Git utilizados](#comandos-git-utilizados)
-  - [Básicos](#básicos)
-  - [Ramas](#ramas)
-  - [Pull Requests (GitHub CLI)](#pull-requests-github-cli)
-  - [Trabajo con gh-pages](#trabajo-con-gh-pages)
+- [Básicos](#básicos)
+- [Ramas](#ramas)
+- [Pull Requests (GitHub CLI)](#pull-requests-github-cli)
+- [Trabajo con gh-pages](#trabajo-con-gh-pages)
 
 ## Creación de clave ssh
 
