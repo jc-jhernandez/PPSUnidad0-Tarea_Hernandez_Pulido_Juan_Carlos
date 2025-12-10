@@ -32,7 +32,7 @@ Configuro una nueva clave ssh en mi instancia Kali y mi cuenta github
     ssh-add .ssh/id_ed25519
     cat .ssh/id_ed25519.pub 
 ```
-![Captura: Configuracion clave ssh ](../images/git-3.png)
+![Captura: Configuracion clave ssh ](images/git-3.png)
 
 ## Creación del repositorio
 
@@ -41,19 +41,19 @@ Primero creo el repo en GitHub. Lo de siempre: login, "New repository", y rellen
 - **Nombre**: `PPS-Unidad0-Tarea-hernandez_pulido_juan_carlos`
 - **Privado** 
 
-![Captura: Creación del repositorio](../images/git-1.png)
-![Captura: Repositorio creado](../images/git-2.png)
+![Captura: Creación del repositorio](images/git-1.png)
+![Captura: Repositorio creado](images/git-2.png)
 
 _**Nota:** Durante la ejecución de la tarea descubrí un error al crear el repositorio privado. Procedo a modificarlo y hacerlo público_
 
-![Captura: Modificar visibilidad](../images/git-1.1.png)
+![Captura: Modificar visibilidad](images/git-1.1.png)
 
 ## Invitar colaborador
 
 Tal y como se indica en la tarea, invito al colaborar PPSvjp
 
-![Captura: Invitar colaborador ](../images/git-5.png)
-![Captura: Listar Colaboradores ](../images/git-6.png)
+![Captura: Invitar colaborador ](images/git-5.png)
+![Captura: Listar Colaboradores ](images/git-6.png)
 
 ## Clonar el repositorio
 
@@ -64,7 +64,7 @@ git clone git@github.com:jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Ca
 cd PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos
 ```
 
-![Captura: Clonación del repositorio](../images/git-4.png)
+![Captura: Clonación del repositorio](images/git-4.png)
 
 ## Estructura del repositorio
 
@@ -85,10 +85,10 @@ Voy a configurar el repositorio siguiendo los pasos indicados en la documentaci�
   git push origin main
 ```
 
-![Captura: Inicialización repositorio](../images/git-9.png)
-![Captura: tree repositorio](../images/git-10.png)
-![Captura: Crear Readme](../images/git-11.png)
-![Captura: Push rama main](../images/git-12.png)
+![Captura: Inicialización repositorio](images/git-9.png)
+![Captura: tree repositorio](images/git-10.png)
+![Captura: Crear Readme](images/git-11.png)
+![Captura: Push rama main](images/git-12.png)
 
 
 
@@ -121,7 +121,7 @@ Resultado de la ejecución
 - **images/** para las capturas realizadas durante la practica
 - **README.md** (ya existente)
 
-![Captura: Push rama main](../images/git-13.png)
+![Captura: Push rama main](images/git-13.png)
 
 ## Verificar la estructura
 
@@ -131,7 +131,7 @@ ls -la
 
 **¿Por qué images/?**
 
-Las capturas van ahí. Es más limpio que tenerlas sueltas en la raíz. Las referencias quedan mejor: `../images/nombre.png`.
+Las capturas van ahí. Es más limpio que tenerlas sueltas en la raíz. Las referencias quedan mejor: `images/nombre.png`.
 
 La estructura queda así:
 
@@ -165,7 +165,7 @@ Realizo el commit y creación de la rama en el repositorio remoto
   git push
   git checkout -b develop
 ```
-![Captura: Creación develop y estructura archivos](../images/git-14.png)
+![Captura: Creación develop y estructura archivos](images/git-14.png)
 
 ## Configuración de Git ignore
 
@@ -197,10 +197,10 @@ Thumbs.db
 
 Voy a realizar el commit del .gitignore y de todas las capturas. En este caso voy a usar la interfaz de Visual Studio Code para proporcionar otro ejemplo.
 
-![Captura: commit .gitignore](../images/git-15.png)
+![Captura: commit .gitignore](images/git-15.png)
 
-![Captura: Adjuntar caputuras en directorio images](../images/git-16.png)
-![Captura: Realizar push mediante interfaz Visual Studio Code](../images/git-17.png)
+![Captura: Adjuntar caputuras en directorio images](images/git-16.png)
+![Captura: Realizar push mediante interfaz Visual Studio Code](images/git-17.png)
 
 Solo se realizan estas acciones en interfaz como ejemplo. Proseguiremos la realización de la practica mediante comandos git para afianzar el conocimiento.
 
@@ -231,7 +231,7 @@ Esta PR incluye primeros pasos de la tarea RA5:
 - [x] Archivos de configuración (.gitignore, requirements.txt)"
 ```
 
-![Captura: PR creado con gh cli](../images/git-pr-1.png)
+![Captura: PR creado con gh cli](images/git-pr-1.png)
 
 ## Verificar el PR
 
@@ -241,7 +241,7 @@ gh pr list
 gh pr view --web
 ```
 
-![Captura: Detalles del PR](../images/git-pr-2.png)
+![Captura: Detalles del PR](images/git-pr-2.png)
 
 ## Merge del Pull Request
 
@@ -258,7 +258,7 @@ _**Nota:** Los PR tienen como objetivo la revisión cruzada de código entre los
 
 Visualización en la web del PR
 
-![Captura: PR web](../images/git-pr-3.png)
+![Captura: PR web](images/git-pr-3.png)
 
 ## Merge desde CLI
 
@@ -266,7 +266,7 @@ Visualización en la web del PR
 gh pr merge 1 --merge
 ```
 
-![Captura: Merge con gh cli](../images/git-pr-4.png)
+![Captura: Merge con gh cli](images/git-pr-4.png)
 
 ## Actualizar main local
 
@@ -278,7 +278,7 @@ git pull origin main
 git log --oneline -5
 ```
 
-![Captura: Pull de main actualizado](../images/git-pr-5.png)
+![Captura: Pull de main actualizado](images/git-pr-5.png)
 
 ## Comandos Git utilizados
 

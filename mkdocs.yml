@@ -1,0 +1,93 @@
+site_name: PPS - Unidad 0 - Tarea RA5
+site_description: Documentación de la tarea obligatoria RA5 - Puesta en Producción Segura
+site_author: Juan Carlos Hernandez Pulido
+
+# Configuración del repositorio
+repo_url: https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos
+repo_name: GitHub
+
+# Tema
+theme:
+  name: material
+  language: es
+  palette:
+    # Modo claro
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    # Modo oscuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+  icon:
+    repo: fontawesome/brands/github
+
+# Navegación
+nav:
+  - Inicio: index.md
+  - Git y Control de Versiones: git.md
+  - GitHub Actions: gitActions.md
+  - GitHub Pages: gitPages.md
+  - Docker y NGINX: docker.md
+  - Conclusiones: conclusiones.md
+
+# Extensiones de Markdown
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+  - search:
+      lang: es
+
+# Información adicional
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jc-jhernandez
+
+  # Pie de página
+  generator: false
+
+# Copyright
+copyright: Copyright &copy; 2024 - Puesta en Producción Segura
