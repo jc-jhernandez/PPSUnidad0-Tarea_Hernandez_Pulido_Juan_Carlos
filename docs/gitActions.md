@@ -1,0 +1,254 @@
+# GitHub Actions - Automatización de Documentación
+
+## Índice
+
+- [Introducción](#introducción)
+- [Estructura del Workflow](#estructura-del-workflow)
+- [Creación del archivo workflow](#creación-del-archivo-workflow)
+- [Explicación del workflow](#explicación-del-workflow)
+- [Configuración de permisos](#configuración-de-permisos)
+- [Activación del workflow](#activación-del-workflow)
+- [Verificar ejecución](#verificar-ejecución)
+- [Verificación rama gh-pages](#verificación-rama-gh-pages)
+- [Ejecución manual](#ejecución-manual)
+- [Solución de problemas](#solución-de-problemas)
+- [Comandos útiles](#comandos-útiles)
+
+## Introducción
+
+GitHub Actions automatiza el proceso de generar y publicar la documentación. Cada vez que hago push a `main`, se ejecuta un workflow que:
+
+- Genera la documentación con MkDocs
+- La publica en GitHub Pages (rama `gh-pages`)
+- Todo automático, sin intervención manual
+
+## Estructura del Workflow
+
+El workflow está en:
+```
+.github/workflows/CreacionDocumentacion.yml
+```
+
+Componentes básicos:
+- **name**: Nombre del workflow
+- **on**: Cuándo se ejecuta
+- **jobs**: Qué hace
+- **steps**: Pasos concretos
+
+## Creación del archivo workflow
+
+Creo el archivo workflow con nano:
+
+```bash
+nano .github/workflows/CreacionDocumentacion.yml
+```
+
+Y lo relleno con este contenido:
+
+```yaml
+name: Generar documentación con MkDocs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+
+      - name: Desplegar documentación en GitHub Pages
+        run: mkdocs gh-deploy --force
+```
+
+![Captura: Creación y contenido del workflow](../images/gitActions-1.png)
+
+## Explicación del workflow
+
+### Triggers
+
+```yaml
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+```
+
+Se ejecuta cuando hago push a `main`. El `workflow_dispatch` permite ejecutarlo manualmente desde GitHub si hace falta.
+
+### Permisos
+
+```yaml
+permissions:
+  contents: write
+```
+
+Necesita permisos de escritura para crear/actualizar la rama `gh-pages`.
+
+### Job
+
+```yaml
+runs-on: ubuntu-latest
+```
+
+Corre en Ubuntu. GitHub proporciona la máquina virtual gratis.
+
+### Steps
+
+**1. Checkout**: Descarga el código del repo
+
+**2. Setup Python**: Instala Python 3.x
+
+**3. Install dependencies**: Instala MkDocs desde `requirements.txt`
+
+**4. Deploy**: Genera la doc y la sube a `gh-pages`
+
+El comando `mkdocs gh-deploy --force` hace todo: genera el HTML, crea/actualiza la rama `gh-pages`, y sube los cambios.
+
+## Configuración de permisos
+
+**IMPORTANTE:** Antes de hacer el merge a main, tengo que configurar los permisos en GitHub.
+
+Pasos:
+
+1. Ir al repositorio en GitHub
+2. **Settings** > **Actions** > **General**
+3. Scroll down hasta **Workflow permissions**
+4. Seleccionar: **Read and write permissions**
+5. **Save**
+
+![Captura: Configuración de permisos](../images/gitActions-2.png)
+
+Sin esto, el workflow falla al intentar crear la rama `gh-pages`.
+
+## Activación del workflow
+
+Ya he generado el archivo workflow, así que lo añado al repositorio y subo:
+
+```bash
+git add .github/workflows/CreacionDocumentacion.yml docs/gitActions.md
+git commit -m "Add: GitHub Actions workflow y documentación"
+git push origin develop
+```
+
+![Captura: Push del workflow](../images/gitActions-3.png)
+
+Una vez hago el merge a `main` (mediante PR), el workflow empieza a funcionar.
+
+## Verificar ejecución
+
+Después del merge, voy a:
+
+1. Repositorio en GitHub
+2. Pestaña **Actions**
+3. Ver el workflow ejecutándose
+
+Estados:
+- 🟡 **Amarillo**: Ejecutándose
+- 🟢 **Verde**: Completado
+- 🔴 **Rojo**: Error
+
+![Captura: Pestaña Actions](../images/gitActions-4.png)
+
+Puedo ver:
+- Estado de cada paso (✓ o ✗)
+- Logs completos
+- Tiempo que tardó
+- Errores si los hay
+
+![Captura: Detalles del workflow](../images/gitActions-5.png)
+
+## Verificación rama gh-pages
+
+Después de la primera ejecución exitosa, verifico que se creó la rama `gh-pages`:
+
+```bash
+git fetch origin
+git branch -a
+```
+
+Debería aparecer `remotes/origin/gh-pages`.
+
+```bash
+# Puedo cambiar a esa rama para ver el contenido
+git checkout gh-pages
+ls -la
+git checkout develop
+```
+
+![Captura: Rama gh-pages](../images/gitActions-6.png)
+
+## Ejecución manual
+
+Si necesito forzar una ejecución sin hacer push:
+
+1. **Actions** en GitHub
+2. "Generar documentación con MkDocs"
+3. **Run workflow**
+4. Seleccionar rama (main)
+5. **Run workflow**
+
+![Captura: Ejecución manual](../images/gitActions-7.png)
+
+## Solución de problemas
+
+### Error de permisos
+
+Si falla por permisos:
+
+**Settings** > **Actions** > **General** > **Workflow permissions** > **Read and write permissions** > **Save**
+
+### Error instalando dependencias
+
+Verificar que `requirements.txt` existe y contiene:
+```
+mkdocs>=1.5.0
+mkdocs-material>=9.4.0
+```
+
+### Ver logs de error
+
+Click en el paso que falló > Ver el log completo
+
+## Comandos útiles
+
+```bash
+# Ver el workflow
+cat .github/workflows/CreacionDocumentacion.yml
+
+# Forzar ejecución (commit vacío)
+git commit --allow-empty -m "Trigger: workflow"
+git push origin main
+
+# Ver ramas
+git branch -a
+
+# Cambiar a gh-pages
+git checkout gh-pages
+
+# Volver a develop
+git checkout develop
+```
+
+---
+
+**Conclusión**
+
+Una vez configurado, el workflow funciona solo. Cada cambio en `main` actualiza automáticamente la documentación en GitHub Pages. Cero trabajo manual.
