@@ -174,6 +174,7 @@ Esta PR incluye primeros pasos de la tarea RA5:
 gh pr merge 2 --merge
 ```
 ![Captura: Pestaña Actions](images/gitActions-4.png)
+
 ## Verificar ejecución
 
 Después del merge, voy a:
@@ -191,8 +192,20 @@ Estados:
 
 Puedo ver un error porque no he completado el contenido del fichero requiriments.txt.
 
-Aplico solución y vuelvo a ejecutar:
+Para solucionarlo, hago uso del mkdocs en local
 
+```bash
+  pip install
+  mkdocs serve --dev-addr=0.0.0.0:8000
+```
+Resultado en local:
+![Captura: Documentación en local](images/mkdocs-localpng)
+
+Vuelvo a realizar PR a producción con todos los cambios. En ese caso ya conseguimos
+![Captura: Pestaña Actions Ejecucion](images/gitActions-5.1.png)
+![Captura: Pestaña Actions Exito](images/gitActions-5.2.png)
+
+Observamos el detalle del workflow realizado con exito y sus pasos:
 
 ![Captura: Detalles del workflow](images/gitActions-6.png)
 
