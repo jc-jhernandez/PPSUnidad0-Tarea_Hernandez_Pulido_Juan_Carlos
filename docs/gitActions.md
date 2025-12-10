@@ -77,7 +77,7 @@ jobs:
         run: mkdocs gh-deploy --force
 ```
 
-![Captura: Creación y contenido del workflow](../images/gitActions-1.png)
+![Captura: Creación y contenido del workflow](images/gitActions-1.png)
 
 ## Explicación del workflow
 
@@ -134,7 +134,7 @@ Pasos:
 4. Seleccionar: **Read and write permissions**
 5. **Save**
 
-![Captura: Configuración de permisos](../images/gitActions-2.png)
+![Captura: Configuración de permisos](images/gitActions-2.png)
 
 Sin esto, el workflow falla al intentar crear la rama `gh-pages`.
 
@@ -148,10 +148,32 @@ git commit -m "Add: GitHub Actions workflow y documentación"
 git push origin develop
 ```
 
-![Captura: Push del workflow](../images/gitActions-3.png)
+![Captura: Push del workflow](images/gitActions-3.png)
 
 Una vez hago el merge a `main` (mediante PR), el workflow empieza a funcionar.
 
+```bash
+gh pr create \
+  --base main \
+  --head develop \
+  --title "Tarea RA5 - Aplicación mkdocs" \
+  --body "## Resumen de cambios
+
+Esta PR incluye primeros pasos de la tarea RA5:
+
+### ✅ Completado
+
+- [x] Estructura del repositorio creada
+- [x] Documentación en Markdown (index, git, gitActions, gitPages, docker, conclusiones)
+- [x] Configuración de MkDocs (mkdocs.yml)
+- [x] Workflow de GitHub Actions para documentación automática
+- [ ] Configuración de GitHub Pages
+- [ ] Instrucciones de Docker/Docker Compose para NGINX
+- [x] Archivos de configuración (.gitignore, requirements.txt)"
+
+gh pr merge 2 --merge
+```
+![Captura: Pestaña Actions](images/gitActions-4.png)
 ## Verificar ejecución
 
 Después del merge, voy a:
@@ -165,15 +187,14 @@ Estados:
 - 🟢 **Verde**: Completado
 - 🔴 **Rojo**: Error
 
-![Captura: Pestaña Actions](../images/gitActions-4.png)
+![Captura: Pestaña Actions](images/gitActions-5.png)
 
-Puedo ver:
-- Estado de cada paso (✓ o ✗)
-- Logs completos
-- Tiempo que tardó
-- Errores si los hay
+Puedo ver un error porque no he completado el contenido del fichero requiriments.txt.
 
-![Captura: Detalles del workflow](../images/gitActions-5.png)
+Aplico solución y vuelvo a ejecutar:
+
+
+![Captura: Detalles del workflow](images/gitActions-6.png)
 
 ## Verificación rama gh-pages
 
@@ -193,7 +214,7 @@ ls -la
 git checkout develop
 ```
 
-![Captura: Rama gh-pages](../images/gitActions-6.png)
+![Captura: Rama gh-pages](images/gitActions-7.png)
 
 ## Ejecución manual
 
@@ -205,7 +226,7 @@ Si necesito forzar una ejecución sin hacer push:
 4. Seleccionar rama (main)
 5. **Run workflow**
 
-![Captura: Ejecución manual](../images/gitActions-7.png)
+![Captura: Ejecución manual](images/gitActions-8.png)
 
 ## Solución de problemas
 

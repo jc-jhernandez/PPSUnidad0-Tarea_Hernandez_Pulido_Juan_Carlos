@@ -160,7 +160,7 @@
     
 1. Imágenes
     ```yaml
-    ![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+    ![The San Juan Mountains are beautiful!](/asseimages/san-juan-mountains.jpg "San Juan Mountains")
     ```   
 1. Enlaces a secciónes
     Cambiamos los expacios por guión medio y todo en minúsculas
