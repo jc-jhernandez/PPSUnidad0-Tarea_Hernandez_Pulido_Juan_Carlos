@@ -203,18 +203,13 @@ Después de la primera ejecución exitosa, verifico que se creó la rama `gh-pag
 ```bash
 git fetch origin
 git branch -a
-```
-
-Debería aparecer `remotes/origin/gh-pages`.
-
-```bash
-# Puedo cambiar a esa rama para ver el contenido
 git checkout gh-pages
 ls -la
 git checkout develop
 ```
 
-![Captura: Rama gh-pages](images/gitActions-7.png)
+![Captura: Rama gh-pages](images/gitActions-7.1.png)
+![Captura: Rama gh-pages contenido](images/gitActions-7.2.png)
 
 ## Ejecución manual
 
@@ -227,49 +222,4 @@ Si necesito forzar una ejecución sin hacer push:
 5. **Run workflow**
 
 ![Captura: Ejecución manual](images/gitActions-8.png)
-
-## Solución de problemas
-
-### Error de permisos
-
-Si falla por permisos:
-
-**Settings** > **Actions** > **General** > **Workflow permissions** > **Read and write permissions** > **Save**
-
-### Error instalando dependencias
-
-Verificar que `requirements.txt` existe y contiene:
-```
-mkdocs>=1.5.0
-mkdocs-material>=9.4.0
-```
-
-### Ver logs de error
-
-Click en el paso que falló > Ver el log completo
-
-## Comandos útiles
-
-```bash
-# Ver el workflow
-cat .github/workflows/CreacionDocumentacion.yml
-
-# Forzar ejecución (commit vacío)
-git commit --allow-empty -m "Trigger: workflow"
-git push origin main
-
-# Ver ramas
-git branch -a
-
-# Cambiar a gh-pages
-git checkout gh-pages
-
-# Volver a develop
-git checkout develop
-```
-
----
-
-**Conclusión**
-
-Una vez configurado, el workflow funciona solo. Cada cambio en `main` actualiza automáticamente la documentación en GitHub Pages. Cero trabajo manual.
+![Captura: Resultado ejecución manual](images/gitActions-8.1.png)
