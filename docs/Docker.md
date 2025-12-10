@@ -5,7 +5,7 @@
 
 # Inicializamos variables 
 ```bash
-Tu_nombre=Aquí_Pones_Tu_Nombre
+Hernandez_Pulido_Juan_Carlos=Aquí_Pones_Hernandez_Pulido_Juan_Carlos
 Tu_mail_docker=Aqui_Pones_Tu_mail_github
 Tu_usuario_docker=Aquí_Pones_Tu_usuario_github
 ```
