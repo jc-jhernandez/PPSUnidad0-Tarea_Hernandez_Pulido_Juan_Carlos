@@ -1,0 +1,261 @@
+[
+    {
+        "Id": "cb06c30b57d052908e6e9fe764e78c2e2cf50dcc2031b798a9ab2e8dde341867",
+        "Created": "2025-12-10T23:37:11.860885432Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 117919,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2025-12-10T23:37:11.919004153Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:10afed3caf3eed1b711b8fa0a9600a7b488a45653a15a598a47ac570c1204cc4",
+        "ResolvConfPath": "/var/lib/docker/containers/cb06c30b57d052908e6e9fe764e78c2e2cf50dcc2031b798a9ab2e8dde341867/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/cb06c30b57d052908e6e9fe764e78c2e2cf50dcc2031b798a9ab2e8dde341867/hostname",
+        "HostsPath": "/var/lib/docker/containers/cb06c30b57d052908e6e9fe764e78c2e2cf50dcc2031b798a9ab2e8dde341867/hosts",
+        "LogPath": "/var/lib/docker/containers/cb06c30b57d052908e6e9fe764e78c2e2cf50dcc2031b798a9ab2e8dde341867/cb06c30b57d052908e6e9fe764e78c2e2cf50dcc2031b798a9ab2e8dde341867-json.log",
+        "Name": "/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/mnt/hgfs/Ciberseguridad/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos:/usr/share/nginx/html:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "ppsunidad0-tarea_hernandez_pulido_juan_carlos_default",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8085"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/32e01af6f9b32feb02079e3593c4d1b3f9df41199bfc927d4d1f061f5be923a6-init/diff:/var/lib/docker/overlay2/1d477c5bad387666877a851c8d374e9400b406c862f30a4aaa78ea6b2c9792d3/diff:/var/lib/docker/overlay2/0b2b472155764869a54d8c9ce1c5836d7fd38f19320668e1b1f6b854cc0542d1/diff:/var/lib/docker/overlay2/462a7b73ff03d0a2be8bb81da630c23d5a87fa7f1bca3bbffc8c7aaf4e2a42ef/diff:/var/lib/docker/overlay2/bdda27312bd7b932420b24b5cd8ff66467e656fa4db1d44d5debace6d9567541/diff:/var/lib/docker/overlay2/93099a656aa567c1f1486c070347e13b6aa19e7149ccce23a2ac002ae42e696b/diff:/var/lib/docker/overlay2/a609f55d7384b2a61ed19329dcef863d832ddbed957d478d7b01d2fff2c15a3f/diff:/var/lib/docker/overlay2/c98eb07b5c1b2105364579b2f8f80faac00a232296931defb535c66a2d39df1a/diff:/var/lib/docker/overlay2/f4b44d0f33b0b7a1ae8a9fdc3aeb8e3302da1e3c9cab1fd532c690aa6b13f534/diff",
+                "MergedDir": "/var/lib/docker/overlay2/32e01af6f9b32feb02079e3593c4d1b3f9df41199bfc927d4d1f061f5be923a6/merged",
+                "UpperDir": "/var/lib/docker/overlay2/32e01af6f9b32feb02079e3593c4d1b3f9df41199bfc927d4d1f061f5be923a6/diff",
+                "WorkDir": "/var/lib/docker/overlay2/32e01af6f9b32feb02079e3593c4d1b3f9df41199bfc927d4d1f061f5be923a6/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/mnt/hgfs/Ciberseguridad/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos",
+                "Destination": "/usr/share/nginx/html",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "cb06c30b57d0",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.29.4",
+                "PKG_RELEASE=1",
+                "DYNPKG_RELEASE=1",
+                "NJS_VERSION=0.9.4",
+                "NJS_RELEASE=1"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx:alpine",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "0b75a561856532ca54dd0316e066ebea6a561127671ac885918144aabcd61dae",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:10afed3caf3eed1b711b8fa0a9600a7b488a45653a15a598a47ac570c1204cc4",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "ppsunidad0-tarea_hernandez_pulido_juan_carlos",
+                "com.docker.compose.project.config_files": "/mnt/hgfs/Ciberseguridad/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/mnt/hgfs/Ciberseguridad/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos",
+                "com.docker.compose.service": "nginx",
+                "com.docker.compose.version": "2.32.4",
+                "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "5f7ec99ed6e82c723f75b6e487784ea7f4178bc36cbfd3415a692c35265b269a",
+            "SandboxKey": "/var/run/docker/netns/5f7ec99ed6e8",
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8085"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8085"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "ppsunidad0-tarea_hernandez_pulido_juan_carlos_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos",
+                        "nginx"
+                    ],
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": null,
+                    "NetworkID": "cdf0108e442920f9ff696b49b737c0c2fe2df062aaba2cd415adb86a06e069f9",
+                    "EndpointID": "6dbac960f2eb1ccbf129570a11b5ce0843df6cfe49bb8d44cf870677e601f08d",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos",
+                        "nginx",
+                        "cb06c30b57d0"
+                    ]
+                }
+            }
+        }
+    }
+]
