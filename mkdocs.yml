@@ -47,7 +47,7 @@ nav:
   - Git y Control de Versiones: git.md
   - GitHub Actions: gitActions.md
   - GitHub Pages: gitPages.md
-  - Docker y NGINX: docker.md
+  - Docker y NGINX: Docker.md
   - Conclusiones: conclusiones.md
 
 # Extensiones de Markdown

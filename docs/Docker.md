@@ -150,3 +150,15 @@ ls -lh docker-inspect.json
 ![Captura: docker inspect](images/docker-9.png)
 
 El archivo `docker-inspect.json` contiene toda la configuración: red, volúmenes, variables de entorno, puertos, etc.
+
+## Eliminar contenedor 
+
+Una vez finalizada la practica y tomadas las evidencias, procedo a eliminar la imagen de mi local
+
+```bash
+docker-compose stop
+docker ps -a
+docker-compose down
+```
+
+![Captura: docker inspect](images/docker-10.png)

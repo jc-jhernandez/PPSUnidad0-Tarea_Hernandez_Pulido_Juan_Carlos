@@ -190,7 +190,7 @@ Estados:
 
 ![Captura: Pestaña Actions](images/gitActions-5.png)
 
-Puedo ver un error porque no he completado el contenido del fichero requiriments.txt.
+Puedo ver un error porque no he completado el contenido del fichero requirements.txt.
 
 Para solucionarlo, hago uso del mkdocs en local
 
@@ -199,13 +199,13 @@ Para solucionarlo, hago uso del mkdocs en local
   mkdocs serve --dev-addr=0.0.0.0:8000
 ```
 Resultado en local:
-![Captura: Documentación en local](images/mkdocs-localpng)
+![Captura: Documentación en local](images/mkdocs-local.png)
 
 Vuelvo a realizar PR a producción con todos los cambios. En ese caso ya conseguimos
-![Captura: Pestaña Actions Ejecucion](images/gitActions-5.1.png)
-![Captura: Pestaña Actions Exito](images/gitActions-5.2.png)
+![Captura: Pestaña Actions Ejecución](images/gitActions-5.1.png)
+![Captura: Pestaña Actions Éxito](images/gitActions-5.2.png)
 
-Observamos el detalle del workflow realizado con exito y sus pasos:
+Observamos el detalle del workflow realizado con éxito y sus pasos:
 
 ![Captura: Detalles del workflow](images/gitActions-6.png)
 
