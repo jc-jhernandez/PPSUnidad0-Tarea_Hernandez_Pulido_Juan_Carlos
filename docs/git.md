@@ -23,16 +23,16 @@
 - [Pull Requests (GitHub CLI)](#pull-requests-github-cli)
 - [Trabajo con gh-pages](#trabajo-con-gh-pages)
 
-## Creación de clave ssh
+## Creación de clave SSH
 
-Configuro una nueva clave ssh en mi instancia Kali y mi cuenta github
+Configuro una nueva clave SSH en mi instancia Kali y mi cuenta GitHub
 
 ``` bash
     ssh-keygen -t ed25519 -C "juancarloshernandezpulido@gmail.com"
     ssh-add .ssh/id_ed25519
     cat .ssh/id_ed25519.pub 
 ```
-![Captura: Configuracion clave ssh ](images/git-3.png)
+![Captura: Configuración clave SSH](images/git-3.png)
 
 ## Creación del repositorio
 
@@ -50,7 +50,7 @@ _**Nota:** Durante la ejecución de la tarea descubrí un error al crear el repo
 
 ## Invitar colaborador
 
-Tal y como se indica en la tarea, invito al colaborar PPSvjp
+Tal y como se indica en la tarea, invito al colaborador PPSvjp
 
 ![Captura: Invitar colaborador ](images/git-5.png)
 ![Captura: Listar Colaboradores ](images/git-6.png)
@@ -68,7 +68,7 @@ cd PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos
 
 ## Estructura del repositorio
 
-Voy a configurar el repositorio siguiendo los pasos indicados en la documentación. Realizare el primer commit, y la generación del README.md en la rama main
+Voy a configurar el repositorio siguiendo los pasos indicados en la documentación. Realizaré el primer commit, y la generación del README.md en la rama main
 ```bash
   git config --global user.name jc-jhernandez
   git config --global user.mail juancarloshernandezpulido@gmail.com
@@ -95,7 +95,7 @@ Voy a configurar el repositorio siguiendo los pasos indicados en la documentaci�
 
 ## Crear rama develop
 
-Por buenas practicas, voy a trabajar por defecto en la rama develop. Una vez verificado y completadas las tareas, realizaré pullrequest a la rama principal main.
+Por buenas prácticas, voy a trabajar por defecto en la rama develop. Una vez verificado y completadas las tareas, realizaré pull request a la rama principal main.
 
 ```bash
 git checkout -b develop
@@ -105,7 +105,7 @@ git checkout -b develop
 
 ```bash
   mkdir -p calculator docs .github/workflows images
-  touch calculator/__init__.py calculator/gui.py  docs/index.md mkdocs.yml requiriments.txt 
+  touch calculator/__init__.py calculator/gui.py  docs/index.md mkdocs.yml requirements.txt 
   cp '/mnt/hgfs/Ciberseguridad/PuestaProduccionSegura/Unidad0-Herramientas/Files/CopiaPegaGit.md' git.md
   cp '/mnt/hgfs/Ciberseguridad/PuestaProduccionSegura/Unidad0-Herramientas/Files/CopiaPegaMarkdown.md' Markdown.md
   cp '/mnt/hgfs/Ciberseguridad/PuestaProduccionSegura/Unidad0-Herramientas/Files/CopiaPegaDocker.md' Docker.md
@@ -160,7 +160,7 @@ Realizo el commit y creación de la rama en el repositorio remoto
 
 ```bash
   git add .
-  git commit -am "Creacion estrucutra archivos"
+  git commit -am "Creación estructura archivos"
   git push --set-upstream origin develop
   git push
   git checkout -b develop
@@ -169,7 +169,7 @@ Realizo el commit y creación de la rama en el repositorio remoto
 
 ## Configuración de Git ignore
 
-Configuro n `.gitignore` para no subir basura:
+Configuro un `.gitignore` para no subir basura:
 
 ```
 # Python
@@ -199,7 +199,7 @@ Voy a realizar el commit del .gitignore y de todas las capturas. En este caso vo
 
 ![Captura: commit .gitignore](images/git-15.png)
 
-![Captura: Adjuntar caputuras en directorio images](images/git-16.png)
+![Captura: Adjuntar capturas en directorio images](images/git-16.png)
 ![Captura: Realizar push mediante interfaz Visual Studio Code](images/git-17.png)
 
 Solo se realizan estas acciones en interfaz como ejemplo. Proseguiremos la realización de la practica mediante comandos git para afianzar el conocimiento.
