@@ -1,43 +1,39 @@
-# PPS - Unidad 0 - Tarea RA5
+# Actividad Unidad 0 - DevSecOps Básico y Automatización de la Documentación
 
-## Introducción
+## Objetivos
 
-Documentación de la tarea obligatoria de la Unidad 0 del módulo de Puesta en Producción Segura (PPS).
+- Documentar un proyecto usando **Markdown**.
+- Controlar el flujo de trabajo con **Git** y ramas.
+- Automatizar tareas de integración y despliegue con **GitHub Actions**.
+- Publicar documentación estática mediante **GitHub Pages**.
+- Desplegar la documentación en un contenedor **Docker** con **NGINX**.
 
-Objetivo: demostrar conocimientos en:
+## Resultados de aprendizaje y Criterios de Evaluación
 
-- **Markdown**: Documentación del proyecto
-- **Git**: Control de versiones y flujo de trabajo
-- **GitHub Actions**: Automatización de workflows
-- **GitHub Pages**: Publicación de documentación
-- **Docker**: Contenedores NGINX para servicios web
+- Aplicar buenas prácticas de versionado en un repositorio remoto.
+- Configurar un flujo de integración continua para generar y publicar la documentación.
+- Utilizar contenedores para servir contenidos web de forma aislada y reproducible.
+- Elaborar documentación técnica clara, estructurada y fácilmente navegable.
+- Justificar las decisiones tomadas durante el desarrollo de la práctica.
 
-## Contenido de la documentación
+## Desarrollo
 
-Organizado en las siguientes secciones:
+En esta actividad se ha preparado un entorno de trabajo con Git, GitHub, Docker y MkDocs.  
+La documentación se ha organizado en varias páginas que explican:
 
-1. [Git - Gestión del Repositorio](git.md): Creación y configuración del repositorio
-2. [GitHub Actions - Automatización](gitActions.md): Workflow para generar documentación automáticamente
-3. [GitHub Pages - Publicación](gitPages.md): Configuración de GitHub Pages
-4. [Docker - Contenedores](docker.md): Contenedor NGINX para servir la documentación
-5. [Conclusiones](conclusiones.md): Reflexiones y aprendizajes
+- El uso de Git y el control de versiones del proyecto.
+- La configuración de GitHub Actions para la automatización.
+- La publicación en GitHub Pages.
+- El despliegue con Docker y NGINX del sitio generado por MkDocs.
 
-## Autor
+Cada apartado describe los pasos realizados, comandos utilizados y capturas de pantalla relevantes.
 
-**Nombre del estudiante**: Juan Carlos Hernández Pulido
+## Entrega
 
-**Curso**: Puesta en Producción Segura
+La entrega de la actividad se realiza mediante:
 
-**Fecha**: Diciembre 2024
+- Repositorio en GitHub con el código, la configuración de MkDocs y los workflows.
+- Publicación de la documentación generada con MkDocs en GitHub Pages.
+- Evidencias del despliegue en Docker y de la ejecución de los workflows.
 
-## Tecnologías utilizadas
-
-- Git y GitHub
-- MkDocs con tema Material
-- GitHub Actions
-- Docker y NGINX
-- Markdown
-
----
-
-*Documentación generada con MkDocs*
+En la página de **Conclusiones** se incluye un resumen del trabajo realizado, los problemas encontrados y cómo se han resuelto.
