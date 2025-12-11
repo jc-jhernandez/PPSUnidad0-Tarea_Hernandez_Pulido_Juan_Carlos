@@ -52,6 +52,6 @@ Abro la URL y funciona:
 
 | Recurso | URL |
 |---------|-----|
-| Repositorio | https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos |
-| **GitHub Pages** | **https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/** |
-| Actions | https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/actions |
+| Repositorio | [https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos](https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos) |
+| **GitHub Pages** | [**https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/**](https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/) |
+| Actions | [https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/actions](https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/actions) |
