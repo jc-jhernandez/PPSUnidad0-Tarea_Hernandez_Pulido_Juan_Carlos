@@ -16,7 +16,7 @@ He aplicado buenas prácticas con Pull Requests para mantener el código organiz
 
 He creado un repositorio en GitHub con dos ramas (main y develop), he configurado GitHub Actions para que publique automáticamente la documentación cada vez que subo cambios, y he montado un contenedor Docker con NGINX para servir la web localmente.
 
-La documentación está publicada en: https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/
+La documentación está publicada en: [https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/](https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/)
 
 ## Problemas que me encontré
 
@@ -28,8 +28,8 @@ El workflow de GitHub Actions no podía publicar en gh-pages por falta de permis
 
 ## Conclusión
 
-Espero haber alcanzado todos los objetivos que se solicitaban en la tarea. 
+Espero haber alcanzado todos los objetivos que se solicitaban en la tarea.
 
-Repositorio: https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos
+**Repositorio**: [https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos](https://github.com/jc-jhernandez/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos)
 
-Web: https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/
+**Web**: [https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/](https://jc-jhernandez.github.io/PPSUnidad0-Tarea_Hernandez_Pulido_Juan_Carlos/)

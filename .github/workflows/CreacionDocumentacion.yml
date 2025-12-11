@@ -1,4 +1,4 @@
-name: Generar documentación con MkDocs
+name: Generar documentaciÃ³n con MkDocs
 
 on:
   push:
@@ -25,5 +25,5 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Desplegar documentación en GitHub Pages
+      - name: Desplegar documentaciÃ³n en GitHub Pages
         run: mkdocs gh-deploy --force
